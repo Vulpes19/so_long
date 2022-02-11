@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 14:51:43 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/10 14:54:48 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/11 18:17:58 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,12 @@ void	ft_func(char *s, t_win *map, t_check *check)
 	check->counter_c = 0;
 	check->counter_p = 0;
 	check->counter_e = 0;
+}
+
+void	ft_variables(t_win *map)
+{
+	map->frames_fox = 0;
+	map->frames_chicken = 0;
+	map->steps_counter = 0;
+	map->iftrue = 0;
 }

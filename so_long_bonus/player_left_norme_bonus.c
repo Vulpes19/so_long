@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 13:37:50 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/10 13:21:43 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/11 18:23:00 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ void	ft_exit_left(t_win *win)
 {
 	win->map_parser[win->player_y][win->player_x] = '0';
 	win->map_parser[win->player_y][win->player_x - 1] = 'E';
-	ft_printf("YOU WIN\n");
+	ft_printf("YOU WIN :D\n");
 	exit(1);
 }
 
 void	ft_touch_enemy_left(t_win *win)
 {
 	win->map_parser[win->player_y][win->player_x] = '0';
-	ft_printf("YOU LOSE\n");
+	ft_printf("YOU LOSE :(\n");
 	exit(1);
 }
 

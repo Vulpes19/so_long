@@ -9,14 +9,14 @@ INCLUDE = /usr/local/include
 CFLAGS = -Wall -Wextra -Werror
 GNL = gnl/get_next_line.c gnl/get_next_line_utils.c
 GNLOBJS = $(GNL:.c=.o)
-SRC = make_window_bonus.c map_parsing_bonus.c game_over_bonus.c check_map_bonus.c additional_func_2_bonus.c render_bonus.c put_image_bonus.c error_msgs_bonus.c player_left_norme_bonus.c player_right_norme_bonus.c player_up_down_bonus.c player_moves_bonus.c ft_itoa_bonus.c animation_bonus.c additional_func_bonus.c
+SRC = make_window_bonus.c map_parsing_bonus.c check_map_bonus.c additional_func_2_bonus.c render_bonus.c put_image_bonus.c error_msgs_bonus.c player_left_norme_bonus.c player_right_norme_bonus.c player_up_down_bonus.c player_moves_bonus.c ft_itoa_bonus.c animation_bonus.c additional_func_bonus.c
 OBJS = $(SRC:.c=.o)
 DEL = rm -f
 
 all: $(NAME)
 
 %.o: %.c $(HEADER)
-	cc -c $(CFLAGS) -o $@ -g $<
+	cc -c $(CFLAGS) $< -g
 
 $(NAME): $(GNLOBJS) $(OBJS) $(LIBPRINTF) $(HEADER)
 	cc $(CFLAGS) -g $(FILES) $(OBJS) $(GNLOBJS) $(LIBPRINTF) -I$(INCLUDE) -L$(MLX) $(MLXFLAGS) -o $(NAME) 

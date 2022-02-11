@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:57:47 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/11 17:53:01 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/11 18:14:13 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 
 typedef struct s_win
 {
-	int		test;
+	int		iftrue;
 	char	*str;
 	int		len;
 	int		fd;

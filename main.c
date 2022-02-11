@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:57:12 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/11 17:53:55 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/11 18:14:26 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	main(int ac, char **av)
 
 	i = 0;
 	map.steps_counter = 0;
-	map.test = 0;
+	map.iftrue = 0;
 	size_of_map(av, &map);
 	if (ac == 2 && check_map(av, &map) && ft_check_map_file(av[1]))
 	{
@@ -60,7 +60,7 @@ int	main(int ac, char **av)
 		mlx_loop_hook(map.init, draw_map, &map);
 		mlx_loop(map.init);
 	}
-	if (map.test == 1)
+	if (map.iftrue == 1)
 	{
 		while (i < map.map_h)
 		{

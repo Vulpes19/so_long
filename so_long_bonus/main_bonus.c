@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:09 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/11 17:32:54 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/11 18:20:23 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,9 @@ int	ft_moves(int key, t_win *win)
 int	main(int ac, char **av)
 {
 	t_win	map;
-	int		i;
 
-	i = 0;
-	map.frames_fox = 0;
-	map.frames_chicken = 0;
-	map.steps_counter = 0;
+	map.i = 0;
+	ft_variables(&map);
 	size_of_map(av, &map);
 	if (ac == 2 && check_map(av, &map))
 	{
@@ -61,11 +58,15 @@ int	main(int ac, char **av)
 		mlx_loop_hook(map.init, draw_map, &map);
 		mlx_loop(map.init);
 	}
-	ft_printf("You must have one argument");
-	while (i < map.map_h)
+	if (map.iftrue == 1)
 	{
-		free(map.map_parser[i]);
-		i++;
+		while (map.i < map.map_h)
+		{
+			free(map.map_parser[map.i]);
+			map.i++;
+		}
+		free(map.map_parser);
 	}
+	ft_printf("You must have one argument and the file must be .ber type");
 	return (0);
 }
