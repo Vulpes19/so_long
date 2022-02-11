@@ -6,19 +6,26 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:09 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/10 17:18:47 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/11 17:32:54 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
 
-int	ft_close(int keycode, t_win *win)
+int	ft_close_esc(int keycode, t_win *win)
 {
 	if (keycode == 53)
 	{
 		free(win->win);
 		exit(0);
 	}
+	return (0);
+}
+
+int	ft_close_x(t_win *map)
+{
+	mlx_clear_window(map->init, map->win);
+	exit(0);
 	return (0);
 }
 
@@ -38,7 +45,9 @@ int	ft_moves(int key, t_win *win)
 int	main(int ac, char **av)
 {
 	t_win	map;
+	int		i;
 
+	i = 0;
 	map.frames_fox = 0;
 	map.frames_chicken = 0;
 	map.steps_counter = 0;
@@ -47,11 +56,16 @@ int	main(int ac, char **av)
 	{
 		make_window(&map, av[1]);
 		mlx_key_hook(map.win, ft_moves, &map);
-		mlx_hook(map.win, 2, 1L << 0, ft_close, &map);
-		mlx_hook(map.win, 12, 0, ft_close, &map);
+		mlx_hook(map.win, 17, 1L << 0, ft_close_x, &map);
+		mlx_hook(map.win, 2, 1L << 0, ft_close_esc, &map);
 		mlx_loop_hook(map.init, draw_map, &map);
 		mlx_loop(map.init);
 	}
 	ft_printf("You must have one argument");
+	while (i < map.map_h)
+	{
+		free(map.map_parser[i]);
+		i++;
+	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:57:47 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/09 16:37:28 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/11 17:53:01 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 
 typedef struct s_win
 {
+	int		test;
 	char	*str;
 	int		len;
 	int		fd;
@@ -100,5 +101,6 @@ void	ft_check_image(t_win *map);
 int		check_map3(t_win *map, t_check *check, char *str);
 void	ft_func(char *s, t_win *map, t_check *check);
 int		check_map4(t_check *check, int len, char *str);
+int		ft_check_map_file(char *s);
 
 #endif

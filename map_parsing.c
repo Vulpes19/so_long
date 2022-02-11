@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 19:17:56 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/10 12:55:08 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/11 17:43:35 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,8 +94,8 @@ void	size_of_map(char **av, t_win *map)
 
 	fd = open(av[1], O_RDONLY);
 	str = get_next_line(fd);
-	free(str);
 	map->map_w = ft_strlen2(str) - 1;
+	free(str);
 	str = get_next_line(fd);
 	while (str)
 	{
