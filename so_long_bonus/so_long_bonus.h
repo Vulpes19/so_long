@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:48 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/09 16:30:19 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/10 14:55:00 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,5 +126,7 @@ void	ft_frames_check(t_win *map);
 void	ft_steps(t_win *map);
 int		check_map4(t_check *check, int len, char *str);
 void	ft_func(char *s, t_win *map, t_check *check);
+void	ft_game_won(t_win *win);
+void	ft_game_lost(t_win *win);
 
 #endif

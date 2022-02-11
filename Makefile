@@ -1,4 +1,5 @@
 NAME = so_long
+BONUS = so_long_bonus
 FILES = main.c
 MLX = /usr/local/lib
 PRINTF = ft_printf
@@ -24,13 +25,18 @@ $(NAME): $(LIBFTARCH) $(GNLOBJS) $(OBJS) $(LIBPRINTF) $(HEADER)
 $(LIBPRINTF):
 	$(MAKE) -C $(PRINTF)
 
+bonus :
+	$(MAKE) -C $(BONUS)
+
 clean:
 	$(DEL) $(OBJS)
 	$(MAKE) -C $(PRINTF) clean
+	$(MAKE) -C $(BONUS) clean
 
 fclean: clean
 	$(DEL) $(NAME)
 	$(MAKE) -C $(PRINTF) fclean
+	$(MAKE) -C $(BONUS) fclean
 
 re: fclean all
 

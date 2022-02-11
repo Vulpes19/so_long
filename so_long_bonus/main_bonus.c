@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:09 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/09 16:24:22 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/10 17:18:47 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ int	main(int ac, char **av)
 		make_window(&map, av[1]);
 		mlx_key_hook(map.win, ft_moves, &map);
 		mlx_hook(map.win, 2, 1L << 0, ft_close, &map);
+		mlx_hook(map.win, 12, 0, ft_close, &map);
 		mlx_loop_hook(map.init, draw_map, &map);
-		// mlx_loop(map.init);
+		mlx_loop(map.init);
 	}
 	ft_printf("You must have one argument");
-	system("leaks so_long_bonus");
 	return (0);
 }

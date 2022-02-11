@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:35 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/09 14:44:32 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/10 12:51:21 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_move_player_down(t_win *win)
 		win->map_parser[win->player_y + 1][win->player_x] = 'P';
 		win->player_y += 1;
 		win->steps_counter += 1;
-		ft_printf("%d\n", win->steps_counter);
 		return ;
 	}
 	if (win->map_parser[win->player_y + 1][win->player_x] == 'C')
@@ -30,7 +29,6 @@ void	ft_move_player_down(t_win *win)
 		win->player_y += 1;
 		win->coll_num -= 1;
 		win->steps_counter += 1;
-		ft_printf("%d\n", win->steps_counter);
 		return ;
 	}
 	if (win->map_parser[win->player_y + 1][win->player_x] ==
@@ -49,7 +47,6 @@ void	ft_move_player_right(t_win *win)
 		win->map_parser[win->player_y][win->player_x + 1] = 'P';
 		win->player_x += 1;
 		win->steps_counter += 1;
-		ft_printf("%d\n", win->steps_counter);
 		return ;
 	}
 	if (win->map_parser[win->player_y][win->player_x + 1] == 'C')
@@ -72,7 +69,6 @@ void	ft_move_player_up(t_win *win)
 		win->map_parser[win->player_y - 1][win->player_x] = 'P';
 		win->player_y -= 1;
 		win->steps_counter += 1;
-		ft_printf("%d\n", win->steps_counter);
 		return ;
 	}
 	if (win->map_parser[win->player_y - 1][win->player_x] == 'C')
@@ -82,7 +78,6 @@ void	ft_move_player_up(t_win *win)
 		win->player_y -= 1;
 		win->coll_num -= 1;
 		win->steps_counter += 1;
-		ft_printf("%d\n", win->steps_counter);
 		return ;
 	}
 	if (win->map_parser[win->player_y - 1][win->player_x] ==
@@ -101,7 +96,6 @@ void	ft_move_player_left(t_win *win)
 		win->map_parser[win->player_y][win->player_x - 1] = 'P';
 		win->player_x -= 1;
 		win->steps_counter += 1;
-		ft_printf("%d\n", win->steps_counter);
 		return ;
 	}
 	if (win->map_parser[win->player_y][win->player_x - 1] == 'C')

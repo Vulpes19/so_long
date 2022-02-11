@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 19:17:56 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/09 16:29:21 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/10 12:55:08 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	check_map(char **av, t_win *map)
 	if (check_borders(map->len, map->str, 'T'))
 	{
 		free(map->str);
-		printf("ERROR: the map isn't closed !");
+		ft_printf("ERROR: the map isn't closed !");
 		return (0);
 	}
 	if (check_map2(map->fd, &check, map->len, map))
