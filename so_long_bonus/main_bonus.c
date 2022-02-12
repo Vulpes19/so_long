@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:09 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/11 18:20:23 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/12 15:51:39 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	main(int ac, char **av)
 	map.i = 0;
 	ft_variables(&map);
 	size_of_map(av, &map);
-	if (ac == 2 && check_map(av, &map))
+	if (ac == 2 && check_map(av, &map) && ft_check_map_file(av[1]))
 	{
 		make_window(&map, av[1]);
 		mlx_key_hook(map.win, ft_moves, &map);

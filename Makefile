@@ -17,9 +17,9 @@ DEL = rm -f
 all: $(NAME)
 
 %.o: %.c
-	cc -c $(CFLAGS) $< -g
+	cc -c $(CFLAGS) -o $@ $< -g
 
-$(NAME): $(LIBFTARCH) $(GNLOBJS) $(OBJS) $(LIBPRINTF) $(HEADER)
+$(NAME): $(GNLOBJS) $(OBJS) $(LIBPRINTF) $(HEADER)
 	cc $(CFLAGS) -g $(FILES) $(OBJS) $(GNLOBJS) $(LIBPRINTF) -I$(INCLUDE) -L$(MLX) $(MLXFLAGS) -o $(NAME) 
 
 $(LIBPRINTF):
@@ -29,7 +29,7 @@ bonus :
 	$(MAKE) -C $(BONUS)
 
 clean:
-	$(DEL) $(OBJS)
+	$(DEL) $(OBJS) $(GNLOBJS)
 	$(MAKE) -C $(PRINTF) clean
 	$(MAKE) -C $(BONUS) clean
 

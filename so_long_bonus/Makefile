@@ -16,7 +16,7 @@ DEL = rm -f
 all: $(NAME)
 
 %.o: %.c $(HEADER)
-	cc -c $(CFLAGS) $< -g
+	cc -c $(CFLAGS) -o $@ $< -g
 
 $(NAME): $(GNLOBJS) $(OBJS) $(LIBPRINTF) $(HEADER)
 	cc $(CFLAGS) -g $(FILES) $(OBJS) $(GNLOBJS) $(LIBPRINTF) -I$(INCLUDE) -L$(MLX) $(MLXFLAGS) -o $(NAME) 

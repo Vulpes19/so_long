@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:57:12 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/11 18:14:26 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/12 15:56:53 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,8 @@ int	ft_moves(int key, t_win *win)
 int	main(int ac, char **av)
 {
 	t_win	map;
-	int		i;
 
-	i = 0;
-	map.steps_counter = 0;
-	map.iftrue = 0;
+	ft_variables(&map);
 	size_of_map(av, &map);
 	if (ac == 2 && check_map(av, &map) && ft_check_map_file(av[1]))
 	{
@@ -62,10 +59,10 @@ int	main(int ac, char **av)
 	}
 	if (map.iftrue == 1)
 	{
-		while (i < map.map_h)
+		while (map.i < map.map_h)
 		{
-			free(map.map_parser[i]);
-			i++;
+			free(map.map_parser[map.i]);
+			map.i++;
 		}
 		free(map.map_parser);
 	}

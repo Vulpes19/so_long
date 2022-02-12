@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:42 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/09 14:42:55 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/12 15:37:34 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,7 @@ void	render(t_win *map, char *s)
 	map->map_parser = malloc(sizeof(char *) * map->map_h + 1);
 	while (map->y <= map->map_h)
 	{
-		map->map_parser[map->y] = malloc(sizeof(char) * map->map_w + 1);
 		map->map_parser[map->y] = get_next_line(fd);
-		free(map->map_parser[map->y]);
 		map->y += 1;
 	}
 	map->map_parser[map->map_h] = 0;

@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:48 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/11 18:21:31 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/12 18:06:25 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # define W_KEY 13
 # define S_KEY 1
 # define D_KEY 2
-# define ORANGE 0xFFBF65
 # define WHITE 0xffffff
 # include <mlx.h> 
 # include <stdio.h>
