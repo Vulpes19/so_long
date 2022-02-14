@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 18:55:01 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/12 17:48:25 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/14 14:37:17 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	assign_texture(t_win *map)
 	map->wall = mlx_xpm_file_to_image(map->init, "./assets/wall.xpm", &w, &h);
 	map->grass = mlx_xpm_file_to_image(map->init, "./assets/grass.xpm", &w, &h);
 	map->exit = mlx_xpm_file_to_image(map->init, "./assets/hole.xpm", &w, &h);
+	ft_check_protection(map);
 }
 
 int	draw_map(t_win *map)

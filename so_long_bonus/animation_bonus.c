@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:41:45 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/09 12:52:12 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/14 15:19:26 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_chicken(t_win *map)
 		(map->init, "./assets/chicken5.xpm", &map->w, &map->h);
 	map->coll2->chicken[9] = mlx_xpm_file_to_image
 		(map->init, "./assets/chicken6.xpm", &map->w, &map->h);
+	ft_coll_protection(map);
 }
 
 void	ft_left(t_win *map)
@@ -62,6 +63,7 @@ void	ft_left(t_win *map)
 		(map->init, "./assets/foxx6.xpm", &map->w, &map->h);
 	map->animation[11] = mlx_xpm_file_to_image
 		(map->init, "./assets/foxx6.xpm", &map->w, &map->h);
+	ft_player_protection(map);
 }
 
 void	ft_right(t_win *map)
@@ -90,4 +92,5 @@ void	ft_right(t_win *map)
 		(map->init, "./assets/fox6.xpm", &map->w, &map->h);
 	map->animation[11] = mlx_xpm_file_to_image
 		(map->init, "./assets/fox6.xpm", &map->w, &map->h);
+	ft_player_protection(map);
 }

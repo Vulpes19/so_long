@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:27 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/10 12:52:15 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/14 15:04:35 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,9 +93,13 @@ void	size_of_map(char **av, t_win *map)
 	char	*str;
 
 	fd = open(av[1], O_RDONLY);
+	if (fd < 0)
+		ft_map_errors('1');
 	str = get_next_line(fd);
-	free(str);
 	map->map_w = ft_strlen2(str) - 1;
+	if (map->map_w < 0)
+		ft_map_errors('2');
+	free(str);
 	str = get_next_line(fd);
 	while (str)
 	{
@@ -105,4 +109,6 @@ void	size_of_map(char **av, t_win *map)
 	}
 	free(str);
 	map->map_h += 1;
+	if (map->map_h == map->map_w)
+		ft_map_errors('3');
 }

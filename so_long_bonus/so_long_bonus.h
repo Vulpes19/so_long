@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:48 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/12 18:06:25 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/14 15:24:56 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,5 +129,10 @@ int		check_map4(t_check *check, int len, char *str);
 void	ft_func(char *s, t_win *map, t_check *check);
 int		ft_check_map_file(char *s);
 void	ft_variables(t_win *map);
+void	ft_variables(t_win *map);
+void	ft_check_protection(t_win *map);
+void	ft_player_protection(t_win *map);
+void	ft_coll_protection(t_win *map);
+void	ft_map_errors(char c);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:57:12 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/12 15:56:53 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/14 14:49:06 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ int	ft_close_x(t_win *map)
 
 int	ft_moves(int key, t_win *win)
 {
-	if (key == S_KEY)
+	if (key == S_KEY || key == DOWN_ARROW)
 		ft_move_player_down(win);
-	if (key == A_KEY)
+	if (key == A_KEY || key == LEFT_ARROW)
 		ft_move_player_left(win);
-	if (key == D_KEY)
+	if (key == D_KEY || key == RIGHT_ARROW)
 		ft_move_player_right(win);
-	if (key == W_KEY)
+	if (key == W_KEY || key == UP_ARROW)
 		ft_move_player_up(win);
 	return (0);
 }
@@ -48,7 +48,9 @@ int	main(int ac, char **av)
 
 	ft_variables(&map);
 	size_of_map(av, &map);
-	if (ac == 2 && check_map(av, &map) && ft_check_map_file(av[1]))
+	if (!ft_check_map_file(av[1]))
+		ft_printf("You must have one argument and the file must be .ber type");
+	if (ac == 2 && check_map(av, &map))
 	{
 		make_window(&map, av[1]);
 		mlx_key_hook(map.win, ft_moves, &map);
@@ -66,6 +68,5 @@ int	main(int ac, char **av)
 		}
 		free(map.map_parser);
 	}
-	ft_printf("You must have one argument and the file must be .ber type");
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:57:47 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/12 15:26:06 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/14 15:12:48 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # define W_KEY 13
 # define S_KEY 1
 # define D_KEY 2
+# define UP_ARROW 126
+# define RIGHT_ARROW 124
+# define DOWN_ARROW 125
+# define LEFT_ARROW 123
 # define WHITE 0xffffff
 # include <mlx.h> 
 # include <stdio.h>
@@ -104,5 +108,7 @@ void	ft_func(char *s, t_win *map, t_check *check);
 int		check_map4(t_check *check, int len, char *str);
 int		ft_check_map_file(char *s);
 void	ft_variables(t_win *map);
+void	ft_check_protection(t_win *map);
+void	ft_map_errors(char c);
 
 #endif
