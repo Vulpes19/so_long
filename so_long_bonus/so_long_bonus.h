@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:48 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/14 15:24:56 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/16 15:20:12 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,6 @@ typedef struct s_chicken
 {
 	void	**chicken;
 }				t_chicken;
-
-typedef struct s_enemy
-{
-	void	**enemy;
-}				t_enemy;
 
 typedef struct s_win
 {
