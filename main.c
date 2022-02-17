@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 17:57:12 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/16 15:16:44 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/17 14:42:34 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,10 @@ int	main(int ac, char **av)
 	ft_variables(&map);
 	size_of_map(av, &map);
 	if (!ft_check_map_file(av[1]))
+	{
 		ft_printf("You must have one argument and the file must be .ber type");
+		return (0);
+	}
 	if (ac == 2 && check_map(av, &map))
 	{
 		make_window(&map, av[1]);

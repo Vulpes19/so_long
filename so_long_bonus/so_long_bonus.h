@@ -6,7 +6,7 @@
 /*   By: abaioumy <abaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:42:48 by abaioumy          #+#    #+#             */
-/*   Updated: 2022/02/16 15:20:12 by abaioumy         ###   ########.fr       */
+/*   Updated: 2022/02/17 14:48:45 by abaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,5 +129,9 @@ void	ft_check_protection(t_win *map);
 void	ft_player_protection(t_win *map);
 void	ft_coll_protection(t_win *map);
 void	ft_map_errors(char c);
+int		ft_close_esc(int keycode, t_win *win);
+int		ft_close_x(t_win *map);
+void	ft_close_window(t_win *map);
+void	ft_not_ber_file(void);
 
 #endif
