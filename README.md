@@ -24,4 +24,4 @@ create a `.ber` file with:
 - **E** is the exit.
 - **C** is the collectible.
 
-**This is my first 2D game, I had so much fun creating my own assets and coding it, I ran into some problems like player animation and memory leaks, but overall I loved working in this project.
+**This is my first 2D game, I had so much fun creating my own assets and coding it, I ran into some problems like player animation and memory leaks, but overall I loved working in this project.**
