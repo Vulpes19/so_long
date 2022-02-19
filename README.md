@@ -13,11 +13,11 @@ Your goal is to collect every collectible on the map, and then escape.
 You are a fox and you need to eat all the chicken in the map, then you will be able to exit and win the game.
 
 ## How to play ?
-Run 'make' and then run 'so_long ./maps/' and choose a map file from the folder.
-If you wanna play the complete game with animation and enemies go to the folder name **so_long_bonus** and run 'make' and then 'so_long_bonus ./maps' and choose a map.
+Run `make` and then run `so_long ./maps/` and choose a map file from the folder.
+If you wanna play the complete game with animation and enemies go to the folder name **so_long_bonus** and run `make` and then `so_long_bonus ./maps` and choose a map.
 
 ##Create your own map:
-create a .ber file with:
+create a `.ber` file with:
 - **1** is the wall.
 - **0** is the grass.
 - **P** is the player.
